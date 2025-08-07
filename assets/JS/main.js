@@ -38,14 +38,14 @@ const structurePage = async function () {
             <div class="ImageRow">
                 <div class="GridStyle">
                     <div class="ImageWrapper SingleImgDiv">
-                        <img src='${group[0].download_url}' alt='${group[0].author}' title='${group[0].author}' loading="lazy">
+                        <img src='${group[0].download_url}' alt='${group[0].author}' title='${group[0].author}' loading="lazy" width="${group[0].width}" height="${group[0].height}">
                     </div>
                     <div class="TwoImgDiv">
                         <div class="ImageWrapper">
-                            <img src='${group[1].download_url}' alt='${group[1].author}' title='${group[1].author}' loading="lazy">
+                            <img src='${group[1].download_url}' alt='${group[1].author}' title='${group[1].author}' loading="lazy" width="${group[0].width}" height="${group[0].height}">
                         </div>
                         <div class="ImageWrapper">
-                            <img src='${group[2].download_url}' alt='${group[2].author}' title='${group[2].author}' loading="lazy">
+                            <img src='${group[2].download_url}' alt='${group[2].author}' title='${group[2].author}' loading="lazy" width="${group[0].width}" height="${group[0].height}">
                         </div>
                     </div>
                 </div>
@@ -54,14 +54,14 @@ const structurePage = async function () {
                 <div class="GridStyle">
                     <div class="TwoImgDiv">
                         <div class="ImageWrapper">
-                            <img src='${group[3].download_url}' alt='${group[3].author}' title='${group[3].author}' loading="lazy">
+                            <img src='${group[3].download_url}' alt='${group[3].author}' title='${group[3].author}' loading="lazy" width="${group[0].width}" height="${group[0].height}">
                         </div>
                         <div class="ImageWrapper">
-                            <img src='${group[4].download_url}' alt='${group[4].author}' title='${group[4].author}' loading="lazy">
+                            <img src='${group[4].download_url}' alt='${group[4].author}' title='${group[4].author}' loading="lazy" width="${group[0].width}" height="${group[0].height}">
                         </div>
                     </div>
                     <div class="ImageWrapper SingleImgDiv">
-                        <img src='${group[5].download_url}' alt='${group[5].author}' title='${group[5].author}' loading="lazy">
+                        <img src='${group[5].download_url}' alt='${group[5].author}' title='${group[5].author}' loading="lazy" width="${group[0].width}" height="${group[0].height}">
                     </div>
                 </div>
             </div>
@@ -105,7 +105,7 @@ window.onscroll = () => {
 
 
     imagesContainer.addEventListener('click',function(e){
-        
+
         const clickedImage=e.target;
 
         if(clickedImage.tagName=="IMG" && clickedImage.closest('.ImageWrapper')){
