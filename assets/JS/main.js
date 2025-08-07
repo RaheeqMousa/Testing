@@ -8,7 +8,7 @@ const loader = document.querySelector(".loader");
 
 async function getImages() {
     try {
-        const elements = await fetch(`https://picsum.photos/v2/list?page=${page}&limit=12`);
+        const elements = await fetch(`https://picsum.photos/v2/list?page=${page}`);
         const data = await elements.json();
         return data;
     } catch (error) {
@@ -101,25 +101,25 @@ window.onscroll = () => {
     const modal= document.querySelector('.modal');
     const imgs = Array.from(document.querySelectorAll(".ImageWrapper img"));
     const closeBtn=document.querySelector('.CloseButtonWrapper button');
+    const imagesContainer=document.querySelector("#images");
 
 
-    imgs.forEach(function(img) {
-        img.addEventListener("click", function(e) {
+    imagesContainer.addEventListener('click',function(e){
+        
+        const clickedImage=e.target;
 
-            document.querySelector('.modal').classList.remove('DisplayNoneModal');
-
-            const currentImage = e.target;
-            console.log("clicked images "+currentImage.title);
+        if(clickedImage.tagName=="IMG" && clickedImage.closest('.ImageWrapper')){
+            modal.classList.remove("DisplayNoneModal");
 
             modal.querySelector(".ImageModal .ImgOptions").innerHTML = `
-                <span>${currentImage.getAttribute('title')}</span>
+                <span>${clickedImage.getAttribute('title')}</span>
                 <button id="DownloadBtn">
                     <i class="fa-solid fa-download"></i>
                 </button>
             `;
-            
+
             document.getElementById("DownloadBtn").addEventListener("click", async function() {
-                const imageURL = currentImage.src;
+                const imageURL = clickedImage.src;
 
                 try {
                     const response=await fetch(imageURL,{mode:'cors'});
@@ -128,7 +128,7 @@ window.onscroll = () => {
 
                     const link =document.createElement('a');
                     link.href=blobTempURL;
-                    link.download=`${currentImage.getAttribute('title')||"image"}.jpg`;
+                    link.download=`${clickedImage.getAttribute('title')||"image"}.jpg`;
                     link.click();
 
                     URL.revokeObjectURL(blobTempURL);
@@ -139,11 +139,10 @@ window.onscroll = () => {
             });
 
             modal.querySelector(".ImageModal .ImageWrapper").innerHTML = `
-            <img src="${currentImage.src}" alt="${currentImage.alt}" title="${currentImage.title}"/>
+                <img src="${clickedImage.src}" alt="${clickedImage.alt}" title="${clickedImage.title}"/>
             `;
-        });
+        }
     });
-
 
     closeBtn.addEventListener("click",function(e){
         modal.classList.add('DisplayNoneModal');
