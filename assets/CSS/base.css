@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400;1,700&family=Aref+Ruqaa+Ink:wght@400;700&family=Artifika&display=swap');
+
+
+:root{
+    --mainFont:'Artifika','Times New Roman';
+}
+
+body{
+    font-family: var(--mainFont);
+    margin:0;
+    padding: 0;
+}
+
+button{
+    border: none;
+}
+
+ul{
+    list-style-type: none;
+}
+
+ul li{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+}
+
+.container{
+    width: 100%;
+    max-width:1000px;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+
+.row{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.flex-direction-column{
+    flex-direction: column;
+}
+
+.flex{
+    display:flex;
+}
+
+.align-end{
+    align-items: flex-end;
+}
+
+ @media screen and (max-width: 600px){
+    .container {
+        width: 90%;
+    }
+ }
