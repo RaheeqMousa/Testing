@@ -114,7 +114,7 @@ window.onscroll = () => {
             modal.querySelector(".ImageModal .ImgOptions").innerHTML = `
                 <span>${currentImage.getAttribute('title')}</span>
                 <button id="DownloadBtn">
-                    <img id="DownloadImg" src="assets/Images/download-solid-full.svg" alt="download icon" title="download image" width="30" height="30">
+                    <i class="fa-solid fa-download"></i>
                 </button>
             `;
             

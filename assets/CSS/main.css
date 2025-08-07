@@ -291,18 +291,24 @@ header ul li{
     width: 50px;
     height: 50px;
     background-color: rgba(0,0,0,0.3);
-    cursor: pointer;
+    border-radius: 10px;
 }
 
 #DownloadBtn{
     cursor: pointer;
 }
 
-#DownloadBtn #DownloadImg,.ImgOptions span{
+
+#DownloadBtn i,.ImgOptions span{
     padding: 5px;
     background-color: #ffffff;
 }
-#DownloadBtn #DownloadImg,.CloseButtonWrapper{
+
+#DownloadBtn i{
+    font-size: 36px;
+    color: black;
+}
+.CloseButtonWrapper{
     border-radius: 10px;
 }
 
@@ -386,6 +392,11 @@ footer{
     background-color: black;
     color: #ffffff;
     padding: 20px 0px;
+}
+
+footer i{
+    font-size: 36px;
+    color: white;
 }
 
 footer a{
