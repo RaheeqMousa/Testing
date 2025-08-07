@@ -8,7 +8,7 @@ const loader = document.querySelector(".loader");
 
 async function getImages() {
     try {
-        const elements = await fetch(`https://picsum.photos/v2/list?page=${page}`);
+        const elements = await fetch(`https://picsum.photos/v2/list?page=${page}&limit=12`);
         const data = await elements.json();
         return data;
     } catch (error) {
