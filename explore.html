@@ -1,90 +1,99 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <title>PicSnap</title>
-        <meta charset="UTF-8">
-        <meta name="description" content="Explore Pictures">
-        <meta name="keywords" content="HTML, CSS, JavaScript">
-        <meta name="author" content="Raheeq Mousa">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link href="assets/CSS/main.css" rel="stylesheet">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    </head>
 
-    <body>
+<head>
+    <title>PicSnap</title>
+    <meta charset="UTF-8">
+    <meta name="description" content="Explore Pictures">
+    <meta name="keywords" content="HTML, CSS, JavaScript">
+    <meta name="author" content="Raheeq Mousa">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="assets/CSS/main.css" rel="stylesheet">
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
+        integrity="..." crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400;1,700&family=Aref+Ruqaa+Ink:wght@400;700&family=Artifika&display=swap"
+        rel="stylesheet" />
+</head>
 
-        <header>
-            <div class="container">
-                <div class="row">
-                    <div>
-                        <img src="assets/Images/logo.png" alt="PicSnap logo" title="PicSnap logo">
-                    </div>
+<body>
 
-                    <nav>
-                        <ul class="row">
-                            <li><a href="index.html">Home</a></li>
-                            <li><a href="explore.html">Explore</a></li>
-                        </ul>
-                    </nav>
-
-                    <nav>
-                        <ul class="row">
-                            <li><a href="#">login</a></li>
-                            <li><a href="#">register</a></li>
-                        </ul>
-                    </nav>
+    <header>
+        <div class="container">
+            <div class="row">
+                <div>
+                    <img src="assets/Images/logo.png" alt="PicSnap logo" title="PicSnap logo">
                 </div>
+
+                <nav>
+                    <ul class="row">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="explore.html">Explore</a></li>
+                    </ul>
+                </nav>
+
+                <nav>
+                    <ul class="row">
+                        <li><a href="#">login</a></li>
+                        <li><a href="#">register</a></li>
+                    </ul>
+                </nav>
             </div>
-            
-            <section class="explore row">
-                <span>Step outside your comfort zone and explore the beauty our world!</span>
-                <section class="ImageSection">
-                    <div class="display-none-mobile">
-                        <img src="assets/Images/camera.jpg" title="Camera" alt="Camera" width="200px" height="200px">
-                        <img src="assets/Images/nature.jpg" title="Nature" alt="Nature" width="200px" height="200px">                   
-                    </div>
-                    <div>
-                        <img src="assets/Images/dog.jpg" title="Dog" alt="Dog" width="200px" height="200px">
-                        <img src="assets/Images/adventure.jpg" title="Adventure" alt="Adventure" width="200px" height="200px">
-                    </div>
-                </section>
-            </section>
-        </header>
+        </div>
 
-        <main>
-            <section class="intro"> <!--I will put a 3d animation scene inside a model viewer here-->
-
-            </section>
-
-            <div class="LoaderContainer">
-                <div class="loader">
-
+        <section class="explore row">
+            <span>Step outside your comfort zone and explore the beauty our world!</span>
+            <section class="ImageSection">
+                <div class="display-none-mobile">
+                    <img src="assets/Images/camera.jpg" title="Camera" alt="Camera" width="200px" height="200px">
+                    <img src="assets/Images/nature.jpg" title="Nature" alt="Nature" width="200px" height="200px">
                 </div>
+                <div>
+                    <img src="assets/Images/dog.jpg" title="Dog" alt="Dog" width="200px" height="200px">
+                    <img src="assets/Images/adventure.jpg" title="Adventure" alt="Adventure" width="200px"
+                        height="200px">
+                </div>
+            </section>
+        </section>
+    </header>
+
+    <main>
+        <section class="intro"> <!--I will put a 3d animation scene inside a model viewer here-->
+
+        </section>
+
+        <div class="LoaderContainer">
+            <div class="loader">
+
             </div>
-            <section id="images">
-               
-            </section>
+        </div>
+        <section id="images">
 
-            <section class="modal DisplayNoneModal">
-                <div class="ImageModal">
-                    <div class="CloseButtonWrapper">
-                        <button>X</button>
-                    </div>
-                    
-                    <div class="ImageWrapper">
-                        
-                    </div>
+        </section>
 
-                    <div class="ImgOptions row">
-                        
-                    </div>
-                    
+        <section class="modal DisplayNoneModal">
+            <div class="ImageModal">
+                <div class="CloseButtonWrapper">
+                    <button>X</button>
                 </div>
-            </section>
-            
-        </main>
 
-        <footer>
+                <div class="ImageWrapper">
+
+                </div>
+
+                <div class="ImgOptions row">
+
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
         <div class="container">
             <div class="row">
                 <img src="assets/Images/logo.png" alt="PicSnap logo" title="PicSnap logo">
@@ -102,17 +111,20 @@
                 <nav>
                     <ul class="row links">
                         <li>
-                            <a href="https://www.linkedin.com/in/raheeq-mousa" target="_blank" aria-label="Raheeq Mousa's LinkedIn Profile">
+                            <a href="https://www.linkedin.com/in/raheeq-mousa" target="_blank"
+                                aria-label="Raheeq Mousa's LinkedIn Profile">
                                 <i class="fa-brands fa-linkedin"></i>
                             </a>
                         </li>
                         <li>
-                            <a href="https://www.facebook.com/raheeqm.mousa" target="_blank" aria-label="Raheeq Mousa's Facebook profile">
+                            <a href="https://www.facebook.com/raheeqm.mousa" target="_blank"
+                                aria-label="Raheeq Mousa's Facebook profile">
                                 <i class="fa-brands fa-square-facebook"></i>
                             </a>
                         </li>
                         <li>
-                            <a href="https://www.instagram.com/heko._.spams/" target="_blank" aria-label="Raheeq Mousa's instagram profile">
+                            <a href="https://www.instagram.com/heko._.spams/" target="_blank"
+                                aria-label="Raheeq Mousa's instagram profile">
                                 <i class="fa-brands fa-instagram"></i>
                             </a>
                         </li>
@@ -122,8 +134,9 @@
         </div>
     </footer>
 
-    
-        <script src="assets/JS/main.js" defer>
-        </script>
-    </body>
+
+    <script src="assets/JS/main.js" defer>
+    </script>
+</body>
+
 </html>
